@@ -1,15 +1,15 @@
-package chrome.pageobject;
-
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-import org.testng.annotations.AfterClass;
+package firefox.pageobject;
 
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 public class TutByTest {
 
@@ -19,8 +19,8 @@ public class TutByTest {
 
 	WebDriver driver;
 
-	@Test
-	public void test_tutBy_chrome() {
+	@Test(enabled = false)
+	public void test_tutBy_fireFox() {
 
 		WebElement login = driver.findElement(By.cssSelector("label.login-input:nth-child(1) > input:nth-child(1)"));
 		login.sendKeys(LOGIN);
@@ -36,16 +36,17 @@ public class TutByTest {
 
 		WebElement buttonQuit = driver.findElement(By.cssSelector("button.navi-dropdown-link"));
 		buttonQuit.click();
+
 	}
 
 	@BeforeClass
 	public void beforeClass() {
 
-		System.setProperty("webdriver.chrome.driver", "d:/Soft/chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.get(SITE_URL);
-		driver.manage().window().maximize();
+		System.setProperty("webdriver.gecko.driver", "d:/Soft/geckodriver.exe");
+		driver = new FirefoxDriver();
+		driver.manage().window().setSize(new Dimension(1680, 1050));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.get(SITE_URL);
 	}
 
 	@AfterClass
