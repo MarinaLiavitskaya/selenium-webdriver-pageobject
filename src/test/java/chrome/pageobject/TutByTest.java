@@ -1,15 +1,16 @@
 package chrome.pageobject;
 
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-import org.testng.annotations.AfterClass;
-
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 public class TutByTest {
 
@@ -34,7 +35,9 @@ public class TutByTest {
 		WebElement buttonDropDown = driver.findElement(By.cssSelector(".navi-item__employer-info"));
 		buttonDropDown.click();
 
-		WebElement buttonQuit = driver.findElement(By.cssSelector("button.navi-dropdown-link"));
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebElement buttonQuit = wait
+				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.navi-dropdown-link")));
 		buttonQuit.click();
 	}
 
