@@ -1,8 +1,11 @@
 package chrome.pagefactory.page;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ResultPage extends AbstractPage {
 
@@ -23,6 +26,8 @@ public class ResultPage extends AbstractPage {
 	private ResultPage clickOn() {
 
 		dropDownMenu.click();
+		WebDriverWait wait = new WebDriverWait(getDriver(), 10);
+		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.navi-dropdown-link")));
 		quitButton.click();
 		return this;
 	}
