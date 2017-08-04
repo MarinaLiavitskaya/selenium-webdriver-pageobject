@@ -7,10 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ResultPage extends AbstractPage {
-
-	// By dropDownMenuLocator = By.cssSelector(".navi-item__employer-info");
-	// By quitButtonLocator = By.cssSelector("button.navi-dropdown-link");
+public class ResultPage extends AbstractPage {	
 
 	@FindBy(css = ".navi-item__employer-info")
 	WebElement dropDownMenu;

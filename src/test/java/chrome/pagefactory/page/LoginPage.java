@@ -6,12 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends AbstractPage {
 
-	static final String SITE_URL = "https://jobs.tut.by/";
-	// By loginLocator = By.cssSelector("label.login-input:nth-child(1) >
-	// input:nth-child(1)");
-	// By passwordLocator = By.cssSelector("label.login-input:nth-child(2) >
-	// input:nth-child(1)");
-	// By buttonLocator = By.cssSelector("input.bloko-button_primary-minor");
+	static final String SITE_URL = "https://jobs.tut.by/";	
 
 	@FindBy(css = "label.login-input:nth-child(1) > input:nth-child(1)")
 	WebElement loginField;
