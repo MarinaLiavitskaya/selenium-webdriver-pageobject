@@ -26,8 +26,8 @@ public class ResultPage extends AbstractPage {
 	private ResultPage clickOn() {
 
 		WebDriverWait wait = new WebDriverWait(getDriver(), 10);
-		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".navi-item__employer-info")));
-		dropDownMenu.click();
+		//wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".navi-item__employer-info")));
+		dropDownMenu.click();		
 		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.navi-dropdown-link")));
 		quitButton.click();
 		return this;
