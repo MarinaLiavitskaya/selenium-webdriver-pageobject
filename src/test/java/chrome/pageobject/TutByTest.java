@@ -44,8 +44,8 @@ public class TutByTest {
 	@BeforeClass
 	public void beforeClass() {
 
-		System.setProperty("webdriver.chrome.driver", "c:/MARINA/Soft/chromedriver.exe");
-		//System.setProperty("webdriver.chrome.driver", "d:/Soft/chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "c:/MARINA/Soft/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "d:/Soft/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get(SITE_URL);
 		driver.manage().window().maximize();

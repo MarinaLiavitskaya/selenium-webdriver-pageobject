@@ -16,8 +16,8 @@ import chrome.pageobject.page.SearchPage;
 public class TutByPageObjectTest {
 
 	static final String DRIVER_NAME = "webdriver.chrome.driver";
-	static final String DRIVER_PATH = "c:/MARINA/Soft/chromedriver.exe";
-	//static final String DRIVER_PATH = "d:/Soft/chromedriver.exe";
+	//static final String DRIVER_PATH = "c:/MARINA/Soft/chromedriver.exe";
+	static final String DRIVER_PATH = "d:/Soft/chromedriver.exe";
 	static final String SITE_URL = "https://jobs.tut.by/";	
 	static final String LOGIN = "marina.liavitskaya@gmail.com";
 	static final String PASSWORD = "3042430mmM";

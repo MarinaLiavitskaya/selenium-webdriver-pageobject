@@ -41,8 +41,9 @@ public class TutByTest {
 
 	@BeforeClass
 	public void beforeClass() {
-
-		System.setProperty("webdriver.gecko.driver", "c:/MARINA/Soft/chromedriver.exe");
+		
+		System.setProperty("webdriver.chrome.driver", "d:/Soft/chromedriver.exe");
+		//System.setProperty("webdriver.gecko.driver", "c:/MARINA/Soft/chromedriver.exe");
 		driver = new FirefoxDriver();
 		driver.manage().window().setSize(new Dimension(1680, 1050));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

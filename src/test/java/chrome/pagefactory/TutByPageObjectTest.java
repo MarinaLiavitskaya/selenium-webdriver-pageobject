@@ -33,8 +33,8 @@ public class TutByPageObjectTest {
 	@BeforeClass
 	public void beforeClass() {
 
-		System.setProperty("webdriver.chrome.driver", "c:/MARINA/Soft/chromedriver.exe");
-		//System.setProperty("webdriver.chrome.driver", "d:/Soft/chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "c:/MARINA/Soft/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "d:/Soft/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
