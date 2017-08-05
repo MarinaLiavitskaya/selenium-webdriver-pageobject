@@ -41,11 +41,11 @@ public class LoginPage extends AbstractPage {
 		return this;
 	}
 
-	public ResultPage logInTutBy(String login, String password) {
+	public SearchPage logInTutBy(String login, String password) {
 
 		sendKeys(login, password);
 		clikOn();
-		return new ResultPage(getDriver());
+		return new SearchPage(getDriver());
 
 	}
 }

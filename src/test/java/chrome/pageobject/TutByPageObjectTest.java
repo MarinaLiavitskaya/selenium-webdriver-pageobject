@@ -25,7 +25,7 @@ public class TutByPageObjectTest {
 	WebDriver driver;
 
 	@Test
-	public void test_tutBy_chrome() {
+	public void test_tutBy_pageObject_chrome() {
 
 		SearchPage searchPage = new LoginPage(driver).openUrl(SITE_URL).logInTutBy(LOGIN, PASSWORD);
 		ResultPage result = searchPage.searchJob("Java developer");

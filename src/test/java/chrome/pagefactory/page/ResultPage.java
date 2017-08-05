@@ -33,6 +33,6 @@ public class ResultPage extends AbstractPage {
 	public LoginPage logOutTutBy() {
 
 		clickOn();
-		return new LoginPage(getDriver());
+		return new LoginPage(getDriver());		
 	}
 }

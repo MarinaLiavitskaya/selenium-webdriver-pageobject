@@ -4,21 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class SearchPage extends AbstractPage {
-
-	// By searchTextField = By.cssSelector(
-	// "body > div.navi.HH-VacancyMainSearchInfoTip-Navi.navi_index >
-	// div.navi__top.HH-Navi-StickyMenu-TopBlock > div > div > div >
-	// div.navi-cell.navi-cell_search >
-	// form.HH-Navi-SearchSelector-Tab.HH-Navi-SearchSelector-Form.HH-VacancyMap-Form
-	// > div > div.bloko-control-group__main > input");
-	//
-	// By searchTextButton = By.cssSelector(
-	// "body > div.navi.HH-VacancyMainSearchInfoTip-Navi.navi_index >
-	// div.navi__top.HH-Navi-StickyMenu-TopBlock > div > div > div >
-	// div.navi-cell.navi-cell_search >
-	// form.HH-Navi-SearchSelector-Tab.HH-Navi-SearchSelector-Form.HH-VacancyMap-Form
-	// > div > div.navi-search-button > button");
+public class SearchPage extends AbstractPage {	
 
 	@FindBy(css = "body > div.navi.HH-VacancyMainSearchInfoTip-Navi.navi_index > div.navi__top.HH-Navi-StickyMenu-TopBlock > div > div > div > div.navi-cell.navi-cell_search > form.HH-Navi-SearchSelector-Tab.HH-Navi-SearchSelector-Form.HH-VacancyMap-Form > div > div.bloko-control-group__main > input")
 	WebElement searchField;
